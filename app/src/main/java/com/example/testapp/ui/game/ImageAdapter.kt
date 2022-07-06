@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.testapp.R
-import com.example.testapp.data.model.Screenshot
+import com.example.testapp.data.model.retrofitmodels.Screenshot
 import com.example.testapp.databinding.GameRecyclerviewItemBinding
 
 class ImageAdapter : RecyclerView.Adapter<ImageAdapter.ImageViewHolder>() {

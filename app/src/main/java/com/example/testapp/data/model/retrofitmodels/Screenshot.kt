@@ -1,4 +1,4 @@
-package com.example.testapp.data.model
+package com.example.testapp.data.model.retrofitmodels
 
 data class Screenshot(
     val id: Int,

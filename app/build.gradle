@@ -1,6 +1,12 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+
+
+    id 'kotlin-kapt'
+    //apply plugin: 'kotlin-kapt'
+
+
 }
 
 android {
@@ -19,6 +25,7 @@ android {
         viewBinding true
     }
 
+
     buildTypes {
         release {
             minifyEnabled false
@@ -33,6 +40,8 @@ android {
         jvmTarget = '1.8'
     }
 }
+
+
 
 dependencies {
 
@@ -51,6 +60,7 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     //implementation 'com.squareup.okhttp3:okhttp:4.9.0'
 
+    //GitHub
     implementation 'com.github.bumptech.glide:glide:4.12.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
 
@@ -65,11 +75,35 @@ dependencies {
     //Links
     implementation 'com.klinkerapps:link_builder:2.0.5'
 
-    //database
-    def room_version = "2.4.2"
 
+
+
+
+
+
+    //database
+    //def room_version = "2.3.0"
+
+    //2.4.2
+    //implementation "androidx.room:room-runtime:$room_version"
+    //annotationProcessor "androidx.room:room-compiler:$room_version"
+
+    //implementation "androidx.room:room-ktx:$room_version"
+    //kapt "androidx.room:room-compiler:$room_version"
+
+
+
+    // Room
+    def room_version = "2.4.2"
     implementation "androidx.room:room-runtime:$room_version"
-    annotationProcessor "androidx.room:room-compiler:$room_version"
+    implementation "androidx.room:room-ktx:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+
+
+
+
+
+
 
     // optional - RxJava2 support for Room
     implementation "androidx.room:room-rxjava2:$room_version"
@@ -86,7 +120,11 @@ dependencies {
     // optional - Paging 3 Integration
     implementation "androidx.room:room-paging:2.5.0-alpha01"
 
+
+
+
+
+
     //Koin
     implementation "io.insert-koin:koin-android:3.2.0"
-
 }

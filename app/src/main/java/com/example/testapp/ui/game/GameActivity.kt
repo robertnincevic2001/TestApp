@@ -7,12 +7,9 @@ import android.widget.Toast
 import androidx.lifecycle.Observer
 import com.bumptech.glide.Glide
 import com.example.testapp.ui.main.MainActivity
-import com.example.testapp.data.model.GameData
 import com.example.testapp.databinding.ActivityGameBinding
 import com.example.testapp.utils.Constants
 import org.koin.androidx.viewmodel.ext.android.viewModel
-import retrofit2.Callback
-import retrofit2.Response
 
 class GameActivity : AppCompatActivity() {
 

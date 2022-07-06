@@ -1,7 +1,7 @@
 package com.example.testapp.data.remote
 
-import com.example.testapp.data.model.GameData
-import com.example.testapp.data.model.Todo
+import com.example.testapp.data.model.retrofitmodels.GameData
+import com.example.testapp.data.model.retrofitmodels.Todo
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query

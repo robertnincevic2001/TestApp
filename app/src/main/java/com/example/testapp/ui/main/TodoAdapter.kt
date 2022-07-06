@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.testapp.R
 import com.example.testapp.ui.game.GameActivity
-import com.example.testapp.data.model.Todo
+import com.example.testapp.data.model.retrofitmodels.Todo
 import com.example.testapp.databinding.ItemTodoBinding
 import com.example.testapp.utils.Constants
 

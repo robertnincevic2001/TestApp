@@ -1,7 +1,7 @@
 package com.example.testapp.data.local
 
 import androidx.room.*
-import com.example.testapp.data.model.Todo
+import com.example.testapp.data.model.retrofitmodels.Todo
 
 @Dao
 interface GameDAO {
@@ -12,6 +12,6 @@ interface GameDAO {
     @Delete
     fun delete( game: Todo)
 
-    @Query("SELECT * FROM dataGame")
+    @Query("SELECT * FROM game_table")
     fun getAll(): List<Todo>
 }
