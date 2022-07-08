@@ -2,7 +2,7 @@ package com.example.testapp.data.model.retrofitmodels
 
 import com.google.gson.annotations.SerializedName
 
-data class Todo (
+data class GameDto (
 
     val id: Int,
     val title: String,

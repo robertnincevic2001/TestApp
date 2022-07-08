@@ -20,7 +20,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/tvTitle"
         android:text="The Title of a Game"
-        android:textColor="#000"
         android:textSize="19sp"
         app:layout_constraintTop_toBottomOf="@+id/game_image"
         app:layout_constraintStart_toStartOf="parent"

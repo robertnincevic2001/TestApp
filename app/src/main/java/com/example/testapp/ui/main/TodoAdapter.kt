@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.testapp.R
 import com.example.testapp.ui.game.GameActivity
-import com.example.testapp.data.model.retrofitmodels.Todo
+import com.example.testapp.data.model.retrofitmodels.GameDto
 import com.example.testapp.databinding.ItemTodoBinding
 import com.example.testapp.utils.Constants
 
@@ -21,9 +21,9 @@ class TodoAdapter : RecyclerView.Adapter<TodoAdapter.TodoViewHolder>() {
 
     private var context: Context? = null
 
-    var todos: List<Todo> = emptyList()
+    var GameDtos: List<GameDto> = emptyList()
 
-    override fun getItemCount() = todos.size
+    override fun getItemCount() = GameDtos.size
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TodoViewHolder {
 
@@ -36,16 +36,16 @@ class TodoAdapter : RecyclerView.Adapter<TodoAdapter.TodoViewHolder>() {
         ))
     }
 
-    fun setAdapter (list: List<Todo>?){
+    fun setAdapter (list: List<GameDto>?){
         list ?: return
-        todos = list
+        GameDtos = list
         notifyDataSetChanged()
     }
 
     override fun onBindViewHolder(holder: TodoViewHolder, position: Int) {
 
         holder.binding.apply {
-            val todo = todos[position]
+            val todo = GameDtos[position]
             tvTitle.text = todo.title
             tvTitle2.text = todo.genre
             linkID.text = todo.gameUrl
@@ -73,11 +73,11 @@ class TodoAdapter : RecyclerView.Adapter<TodoAdapter.TodoViewHolder>() {
 
                 }
                 else{
-                    val oldPosition = todos.indexOfFirst {
+                    val oldPosition = GameDtos.indexOfFirst {
                         it.visibility == true
                     }
                     if(oldPosition != -1){
-                        todos[oldPosition].visibility = false
+                        GameDtos[oldPosition].visibility = false
                         notifyItemChanged(oldPosition)
                     }
                     todo.visibility = true

@@ -47,7 +47,6 @@ class MainActivity : AppCompatActivity() {
             binding.progressBar.isVisible = false
 
         })
-
     }
 
     private fun setupRecyclerView() {

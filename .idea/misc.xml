@@ -8,6 +8,7 @@
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.23802083333333332" />
         <entry key="app/src/main/res/layout/game_recyclerview_item.xml" value="0.2249618530273437" />
         <entry key="app/src/main/res/layout/item_todo.xml" value="0.2643386840820313" />
+        <entry key="app/src/main/res/xml/network_security_config.xml" value="0.10729166666666666" />
       </map>
     </option>
   </component>

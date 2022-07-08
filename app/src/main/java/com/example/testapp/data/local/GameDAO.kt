@@ -1,17 +1,16 @@
 package com.example.testapp.data.local
 
 import androidx.room.*
-import com.example.testapp.data.model.retrofitmodels.Todo
+import com.example.testapp.data.local.AppDatabase.Companion.GAME_ENTITY
+import com.example.testapp.data.model.databasemodels.GameEntity
 
 @Dao
 interface GameDAO {
 
+    @Query("SELECT * FROM $GAME_ENTITY")
+    fun getAll(): List<GameEntity>
+
     @Insert
-    fun insertAll( game: List<Todo>)
+    fun insertAll(games : List<GameEntity>)
 
-    @Delete
-    fun delete( game: Todo)
-
-    @Query("SELECT * FROM game_table")
-    fun getAll(): List<Todo>
 }
